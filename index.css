@@ -1,0 +1,121 @@
+html,
+body,
+.wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  /* display: inline-block; */
+  text-align: center;
+  /* padding: 40px; */
+  /* display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; */
+  /* flex-grow: 1; */
+}
+
+.red {
+  --redPic: url(./red_on_green.jpg);
+
+  position: relative;
+
+  max-width: 960px;
+  max-height: 630px;
+  width: 100vw;
+  height: 100vh;
+
+  background-image: var(--redPic);
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.red::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 960px;
+  max-height: 630px;
+  width: 100vw;
+  height: 100vh;
+
+  background-image: var(--redPic);
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  filter: grayscale(1) contrast(1.2);
+  z-index: 0;
+  mix-blend-mode: lighten;
+  background-blend-mode: hard-light;
+  background-color: #c2c2c2;
+}
+.red::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: var(--redPic);
+  background-repeat: no-repeat;
+  background-size: 10%;
+
+  z-index: 1;
+}
+
+.blue {
+  --bluePic: url(./blue_on_green.jpg);
+
+  position: relative;
+
+  max-width: 900px;
+  max-height: 506px;
+  width: 100vw;
+  height: 100vh;
+
+  background-image: var(--bluePic);
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  display: inline-block;
+}
+.blue::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 900px;
+  max-height: 506px;
+  width: 100vw;
+  height: 100vh;
+
+  background-image: var(--bluePic);
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  filter: grayscale(1) contrast(1.2);
+  z-index: 0;
+  mix-blend-mode: lighten;
+  background-blend-mode: hard-light;
+  background-color: #c2c2c2;
+}
+.blue::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: var(--bluePic);
+  background-repeat: no-repeat;
+  background-size: 10%;
+
+  z-index: 1;
+}
